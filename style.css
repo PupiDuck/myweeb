@@ -1,10 +1,99 @@
+:root{
+/*#1f2041*/
+--gray5:rgba(31, 32, 65, 5%);
+--gray25:rgba(31, 32, 65, 25%);
+--gray50:rgba(31, 32, 65, 50%);
+--gray75:rgba(31, 32, 65, 75%);
+--gray100:rgba(31, 32, 65, 75%);
+
+--green:rgba(111, 207, 151, 100%);/*#6fcf97  100%*/
+
+--pink:rgba(188, 156, 255, 100%);/*#bc9cff 100%*/
+
+/*--gradient:linear-gradient(to top,#8fa3fa 0%, var(--pink));*/
+}
+
+
+/*=====text=======*/
 .btn-text{
 font-family: Open Sans Bold, sans-serif;
 text-transform: uppercase;
 text-align: center;
 }
+.btn-pink-text{
+ color: var(--pink);
+}
+.btn-gray-text{
+  color:var(--gray25);
+}
+.btn-white-text{
+   color: white;
+}
 
 
+
+/*=====buttons=======*/
+
+ .btn-1{
+ text-transform: uppercase;
+ padding: 20px;
+ border-radius: 40px;
+background-image: linear-gradient(to top, #8fa3fa 0%, var(--pink));/*середина была- #b99cff 51%,*/
+
+}
+
+.btn-2{
+ text-transform: uppercase;
+ padding: 20px;
+ text-align: center;
+ //color: white;
+ border-radius: 40px;
+ background-image: linear-gradient(to top, var(--gray25), var(--pink));   /*#1f2041 0% середина-#b99cff 51%, transparent 1em,*/
+}
+
+.btn-border-1 {
+    position: relative;
+    border: 4px solid transparent;
+    border-radius: 40px;
+    background: white;//linear-gradient(#8fa3fa 0%,  #bc9cff 100%);
+    background-clip: padding-box;
+    padding: 10px;
+
+}
+
+.btn-border-1::after {
+    position: absolute;
+    top: -4px; bottom: -4px;
+    left: -4px; right: -4px;
+    background: linear-gradient(#8fa3fa 0%,  var(--pink));
+    content: '';
+    z-index: -1;
+    border-radius: 40px;
+}
+
+
+.btn-border-2 {
+    position: relative;
+    border: 4px solid transparent;
+    border-radius: 40px;
+    background: white;//linear-gradient(#8fa3fa 0%,  #bc9cff 100%);
+    background-clip: padding-box;
+    padding: 10px;
+
+}
+
+.btn-border-2::after {
+    position: absolute;
+    top: -4px; bottom: -4px;
+    left: -4px; right: -4px;
+    background: linear-gradient(#8fa3fa 0%,  var(--gray25));
+    content: '';
+    z-index: -1;
+    border-radius: 40px;
+}
+
+
+/* градиент текста
 .btn-gradient-text-1 {
   background: linear-gradient(to top, #8fa3fa 0%, #b99cff 51%, #bc9cff 100%);
   -webkit-background-clip: text;
@@ -16,43 +105,10 @@ text-align: center;
   -webkit-text-fill-color: transparent;
 }
 
-.btn-white-text{
-   color: white;
-}
+*/
+/*=====checkbox=======*/
+/*======красивые штуки: https://nisnom.com/checkbox-chekboksy-dlya-sajta-s-effektami-i-animatsiej-html-css-i-javascript-jquery/   ======*/
+checkbox:hover{
+background-color: red;
 
- .btn-1 {
- text-transform: uppercase;
- padding: 20px;
- border-radius: 40px;
-background-image: linear-gradient(to top, #8fa3fa 0%, #b99cff 51%, #bc9cff 100%);
-
-}
-
-.btn-2 {
- text-transform: uppercase;
- padding: 20px;
- text-align: center;
- //color: white;
- border-radius: 40px;
- background-image: linear-gradient(to top, #1f2041 25%, #b99cff 51%, #bc9cff 100%);   //#1f2041 0%
-}
-
-.btn-border {
-    position: relative;
-    border: 4px solid transparent;
-    border-radius: 40px;
-    background: white;//linear-gradient(#8fa3fa 0%,  #bc9cff 100%);
-    background-clip: padding-box;
-    padding: 10px;
-
-}
-
-.btn-border::after {
-    position: absolute;
-    top: -4px; bottom: -4px;
-    left: -4px; right: -4px;
-    background: linear-gradient(#8fa3fa 0%,  #bc9cff 100%);
-    content: '';
-    z-index: -1;
-    border-radius: 40px;
 }
